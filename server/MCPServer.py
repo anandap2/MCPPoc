@@ -1,5 +1,8 @@
 import anthropic
+from dotenv import load_dotenv
 from fastmcp import FastMCP
+
+load_dotenv()
 
 def create_server():
     mcp = FastMCP("POC MCP Server")
