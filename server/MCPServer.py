@@ -18,7 +18,13 @@ def create_server():
         ) as stream:
             return stream.get_final_message().content[0].text
 
+    @mcp.tool
+    def greet_user(name: str) -> str:
+        """Greet a user by name."""
+        return f"Hello, {name}! Welcome to the POC MCP Server."
+
     return mcp
+
 
 mcp = create_server()
 
